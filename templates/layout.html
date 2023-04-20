@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap-icons/bootstrap-icons.css' %}"
+    />
+    <!-- default styles -->
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}" />
+    {% endblock %}
+    <!-- title -->
+    {% block title %} {% endblock %}
+  </head>
+  <body>
+    <!-- header section -->
+    {% block header %} {% include 'header.html' %} {% endblock %}
+
+    <!-- content section -->
+    <div style="margin-top: 105px">{% block content %} {% endblock %}</div>
+
+    <!-- footer section -->
+    {% block footer %} {% endblock %}
+    <!-- js -->
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    {% block js %} {% endblock %}
+  </body>
+</html>

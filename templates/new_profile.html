@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+<!-- staticfiles -->
+{% load static %}
+<!-- crispy -->
+{% load crispy_forms_tags %}
+
+<!-- ------------- -->
+{% block content %}
+<form class="col-10 col-md-7 mx-auto" method="post">
+  <h3 class="mt-4 text-decoration-underline">Update Profile</h3>
+  {% csrf_token %}
+  <!-- form -->
+  {{form|crispy}}
+  <button class="mb-4 btn btn-success">Create Profile</button>
+</form>
+{% endblock %}

@@ -1,0 +1,54 @@
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  padding: 10px;
+  box-shadow: var(--box-shadow);
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.login-button {
+  width: 8.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--success);
+  color: var(--light);
+}
+
+.dropdown-toggler-icon {
+  display: none;
+}
+
+.dropdown-toggler-icon > button {
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 580px) {
+  .brand {
+    display: none;
+  }
+  .dropdown-toggler-icon {
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
+  .header {
+    justify-content: right;
+  }
+}
